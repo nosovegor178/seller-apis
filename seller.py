@@ -303,9 +303,9 @@ async def upload_stocks(watch_remnants, client_id, seller_token):
 
     Examples:
         Right:
-            response = update_stocks([], "", "")
+            response = upload_stocks([], "", "")
         Wrong:
-            response = update_stocks("", {}, 323)
+            response = upload_stocks("", {}, 323)
     """
     offer_ids = get_offer_ids(client_id, seller_token)
     stocks = create_stocks(watch_remnants, offer_ids)
