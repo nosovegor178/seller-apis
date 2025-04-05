@@ -16,7 +16,7 @@ def get_product_list(page, campaign_id, access_token):
 
     Arguments:
     page - токен страницы с товарами (type: str)
-    campaign_id - id компании с товарами (type: int)
+    campaign_id - id компании с товарами (type: str)
     access_token - токен доступа от Яндекса (type: str)
 
     Returns: 
@@ -245,7 +245,7 @@ async def upload_prices(watch_remnants, campaign_id, market_token):
     
     Args:
     watch_remnants - список часов (type: list)
-    client_id - id продавца (type: str)
+    campaign_id - id компании (type: str)
     market_token - api-token продавца от сайта Yandex (type: str)
 
     Returns:
@@ -269,17 +269,18 @@ async def upload_stocks(watch_remnants, campaign_id, market_token, warehouse_id)
     
     Args:
     watch_remnants - список часов (type: list)
-    client_id - id продавца (type: str)
+    campaign_id - id компании (type: str)
     market_token - api-token продавца от сайта Yandex (type: str)
+    warehouse_id = id склада для поиска (type: str)
 
     Returns:
     Возвращает два списка: один с часами, у которых есть остаток, а второй - со всеми часами.
 
     Examples:
         Right:
-            response = update_stocks([], "", "")
+            response = update_stocks([], "", "", "")
         Wrong:
-            response = update_stocks("", {}, 323)
+            response = update_stocks("", {}, 323, 345)
     """
     offer_ids = get_offer_ids(campaign_id, market_token)
     stocks = create_stocks(watch_remnants, offer_ids, warehouse_id)
