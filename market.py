@@ -52,7 +52,7 @@ def update_stocks(stocks, campaign_id, access_token):
 
     Arguments:
     stocks - данные об остатках товаров (type: UpdateStockItemDTO)
-    campaign_id - id компании с товарами (type: int)
+    campaign_id - id компании с товарами (type: str)
     access_token - токен доступа от Яндекса (type: str)
 
     Returns: 
@@ -86,7 +86,7 @@ def update_price(prices, campaign_id, access_token):
 
     Arguments:
     prices - цены товаров
-    campaign_id - id компании с товарами (type: int)
+    campaign_id - id компании с товарами (type: str)
     access_token - токен доступа от Яндекса (type: str)
 
     Returns: 
@@ -118,7 +118,7 @@ def get_offer_ids(campaign_id, market_token):
     """Получает артикулы товаров с Яндекса.
 
     Arguments:
-    campaign_id - id компании с товарами (type: int)
+    campaign_id - id компании с товарами (type: str)
     market_token - токен доступа от Яндекса (type: str)
 
     Returns: 
