@@ -51,7 +51,7 @@ def update_stocks(stocks, campaign_id, access_token):
     Обновляет стоки (товары на складе) на Яндексе.
 
     Arguments:
-    stocks - данные об остатках товаров (type: UpdateStockItemDTO)
+    stocks - данные об остатках товаров (type: list)
     campaign_id - id компании с товарами (type: str)
     access_token - токен доступа от Яндекса (type: str)
 
@@ -85,7 +85,7 @@ def update_price(prices, campaign_id, access_token):
     Обновляет цены на Яндексе.
 
     Arguments:
-    prices - цены товаров
+    prices - цены товаров (type: list)
     campaign_id - id компании с товарами (type: str)
     access_token - токен доступа от Яндекса (type: str)
 
@@ -122,7 +122,7 @@ def get_offer_ids(campaign_id, market_token):
     market_token - токен доступа от Яндекса (type: str)
 
     Returns: 
-    Возвращет список артикулов товаров.
+    Возвращет список артикулов товаров. (type: list)
 
     Examples:
         Right:
@@ -153,7 +153,7 @@ def create_stocks(watch_remnants, offer_ids, warehouse_id):
     warehouse_id = id склада для поиска (type: str)
 
     Returns: 
-    Возвращет список товаров, оставшихся на складе.
+    Возвращет список товаров, оставшихся на складе. (type: list)
 
     Examples:
         Right:
@@ -213,7 +213,7 @@ def create_prices(watch_remnants, offer_ids):
     offer_ids = список артикулов товаров (type: list)
 
     Returns: 
-    Возвращет список товаров, оставшихся на складе.
+    Возвращет список товаров, оставшихся на складе. (type: list)
 
     Examples:
         Right:
@@ -249,7 +249,7 @@ async def upload_prices(watch_remnants, campaign_id, market_token):
     market_token - api-token продавца от сайта Yandex (type: str)
 
     Returns:
-    Возвращает список цен
+    Возвращает список цен. (type: list)
 
     Examples:
         Right:
@@ -274,7 +274,7 @@ async def upload_stocks(watch_remnants, campaign_id, market_token, warehouse_id)
     warehouse_id = id склада для поиска (type: str)
 
     Returns:
-    Возвращает два списка: один с часами, у которых есть остаток, а второй - со всеми часами.
+    Возвращает два списка: один с часами, у которых есть остаток, а второй - со всеми часами. (type: list, list)
 
     Examples:
         Right:

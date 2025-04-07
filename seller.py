@@ -254,7 +254,7 @@ def divide(lst: list, n: int):
     n - количество элементов (type: int)
 
     Yield:
-    Генерирует части списка размером в n элементов
+    Генерирует части списка размером в n элементов (type: list)
 
     Examples:
         Right:
@@ -275,7 +275,7 @@ async def upload_prices(watch_remnants, client_id, seller_token):
     seller_token - api-token продавца от сайта Ozon (type: str)
 
     Returns:
-    Возвращает список цен
+    Возвращает список цен (type: list)
 
     Examples:
         Right:
@@ -299,7 +299,7 @@ async def upload_stocks(watch_remnants, client_id, seller_token):
     seller_token - api-token продавца от сайта Ozon (type: str)
 
     Returns:
-    Возвращает два списка: один с часами, у которых есть остаток, а второй - со всеми часами.
+    Возвращает два списка: один с часами, у которых есть остаток, а второй - со всеми часами. (type: list, list)
 
     Examples:
         Right:
